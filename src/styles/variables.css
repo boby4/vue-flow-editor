@@ -1,0 +1,15 @@
+:root {
+  --fe-sidebar-bg: #1a1d26;
+  --fe-sidebar-width: 56px;
+  --fe-primary: #4fd1c5;
+  --fe-primary-hover: #38b2ac;
+  --fe-canvas-bg: #f5f6f8;
+  --fe-panel-width: 360px;
+  --fe-node-bg: #ffffff;
+  --fe-node-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+  --fe-node-radius: 12px;
+  --fe-edge-color: #94a3b8;
+  --fe-text: #1e293b;
+  --fe-text-muted: #64748b;
+  --fe-border: #e2e8f0;
+}

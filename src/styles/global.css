@@ -1,0 +1,257 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--fe-text);
+  background: var(--fe-canvas-bg);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.fe-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fe-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fe-workspace {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+}
+
+.fe-panel {
+  width: var(--fe-panel-width);
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--fe-border);
+  overflow: auto;
+  z-index: 2;
+}
+
+.fe-canvas-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  background: var(--fe-canvas-bg);
+}
+
+.fe-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Node cards */
+.fe-node {
+  width: 100%;
+  height: 100%;
+  background: var(--fe-node-bg);
+  border-radius: var(--fe-node-radius);
+  box-shadow: var(--fe-node-shadow);
+  border: 1px solid var(--fe-border);
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fe-node--trigger {
+  padding-top: 10px;
+}
+
+.fe-node__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--fe-primary);
+}
+
+.fe-node__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.fe-node__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--fe-border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  text-align: left;
+  background: #fff;
+  color: inherit;
+}
+
+.fe-node__item:hover {
+  border-color: var(--fe-primary);
+  background: #f0fdfa;
+}
+
+.fe-node__item--active {
+  border-color: var(--fe-primary);
+  background: #ecfdf5;
+  box-shadow: 0 0 0 1px var(--fe-primary);
+}
+
+.fe-node__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #dcfce7;
+  color: #16a34a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.fe-node__add {
+  width: 100%;
+  border: 1px dashed var(--fe-border);
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--fe-text-muted);
+  font-size: 13px;
+}
+
+.fe-node__add:hover {
+  border-color: var(--fe-primary);
+  color: var(--fe-primary);
+  background: #f0fdfa;
+}
+
+.fe-node__port-label {
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--fe-text-muted);
+}
+
+.fe-node__port-label--right {
+  right: -40px;
+}
+
+.fe-node--picker {
+  padding: 16px;
+}
+
+.fe-picker-group {
+  margin-bottom: 12px;
+}
+
+.fe-picker-group__label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fe-text-muted);
+  margin-bottom: 8px;
+}
+
+.fe-picker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fe-picker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  color: var(--fe-text);
+}
+
+.fe-picker-item:hover {
+  border-color: var(--fe-primary);
+  background: #f0fdfa;
+}
+
+.fe-node--step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.fe-node__step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.fe-node__step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.fe-node__step-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fe-node__step-summary {
+  font-size: 12px;
+  color: var(--fe-text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fe-node__branch-labels {
+  position: absolute;
+  right: -34px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 11px;
+  color: var(--fe-text-muted);
+}
+
+.x6-edge:hover .x6-edge-line {
+  stroke: var(--fe-primary);
+  stroke-width: 3;
+}
