@@ -1,5 +1,7 @@
 # Flow Editor
 
+在线体验：[https://vue-flow-editor.vercel.app/](https://vue-flow-editor.vercel.app/)
+
 基于 Vue 3 的可视化流程编辑器，面向 WhatsApp 等渠道的消息自动化场景。通过画布拖拽、连线与右侧配置面板，快速搭建「触发器 → 步骤」工作流。
 
 ## 功能概览
